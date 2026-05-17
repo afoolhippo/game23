@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>カジュアルバー</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio id="bgm" src="bgm.mp3" loop></audio>
+
+<div id="titleScreen" class="screen active">
+  <img src="title.png" id="titleImage">
+  <div class="titleText">今夜も、なんとなく来てしまった。</div>
+  <button id="startButton">TAP TO START</button>
+</div>
+
+<div id="gameScreen" class="screen">
+
+  <div id="topBar">
+    <div id="timeDisplay">🕒 19:00　👥 4</div>
+    <button id="titleButton">タイトルへ</button>
+  </div>
+
+  <div id="bgContainer">
+    <img src="bg_bar.png" id="barBg">
+  </div>
+
+  <div id="messageBox">
+    <div id="speakerName">マスター</div>
+    <div id="messageText"></div>
+
+    <div id="choices">
+      <button class="choiceButton"></button>
+      <button class="choiceButton"></button>
+      <button class="choiceButton"></button>
+    </div>
+
+    <div id="leaveArea">
+      <button id="leaveButton">🥃 帰る</button>
+    </div>
+  </div>
+
+</div>
+
+<div id="resultScreen" class="screen">
+
+  <div id="resultTitle">カウンターの住人</div>
+  <div id="resultComment">グラスの氷だけが時間を知っていた。</div>
+
+  <div id="stats">
+    <div class="statRow"><span>酔い度</span><span id="drunkStat">□□□□□</span></div>
+    <div class="statRow"><span>常連感</span><span id="regularStat">□□□□□</span></div>
+    <div class="statRow"><span>気まずさ</span><span id="awkwardStat">□□□□□</span></div>
+    <div class="statRow"><span>帰れなさ</span><span id="stayStat">□□□□□</span></div>
+  </div>
+
+  <div id="resultButtons">
+    <button id="shareButton">Xでシェア</button>
+    <button id="retryButton">もう一回遊ぶ</button>
+    <button id="homeButton">カバゲーセンへ</button>
+  </div>
+
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
