@@ -24,8 +24,6 @@ body{
   display:flex;
 }
 
-/* タイトル */
-
 #titleScreen{
   justify-content:flex-start;
   padding-top:20px;
@@ -51,15 +49,9 @@ button{
   border:none;
   border-radius:14px;
   cursor:pointer;
-
   color:white;
-
-  background:
-  linear-gradient(180deg,#9b6a45,#5d3b26);
-
-  box-shadow:
-  inset 0 1px 0 rgba(255,255,255,.2),
-  0 4px 10px rgba(0,0,0,.3);
+  background:linear-gradient(180deg,#9b6a45,#5d3b26);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 4px 10px rgba(0,0,0,.3);
 }
 
 #startButton{
@@ -67,8 +59,6 @@ button{
   padding:14px 20px;
   font-size:16px;
 }
-
-/* ゲーム */
 
 #gameScreen{
   position:relative;
@@ -80,23 +70,17 @@ button{
   top:10px;
   left:10px;
   right:10px;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   z-index:20;
 }
 
 #timeDisplay{
   background:rgba(30,15,10,.65);
-
   padding:10px 14px;
-
   border-radius:14px;
-
   font-size:16px;
-
   border:1px solid rgba(255,255,255,.12);
 }
 
@@ -107,49 +91,34 @@ button{
 
 #bgContainer{
   position:relative;
-
   width:100%;
   height:50vh;
   height:50dvh;
-
   overflow:hidden;
-
   display:flex;
   justify-content:center;
   align-items:flex-start;
-
   padding-top:52px;
 }
 
 #barBg{
   width:100%;
   max-width:560px;
-
   aspect-ratio:1/1;
-
   object-fit:cover;
   object-position:top;
-
   image-rendering:pixelated;
 }
 
-/* シルエット */
-
 .personImg{
   position:absolute;
-
   left:50%;
   bottom:0;
-
   transform:translateX(-50%);
-
-  width:72%;
-  max-width:360px;
-
+  width:100%;
+  max-width:500px;
   image-rendering:pixelated;
-
   display:none;
-
   pointer-events:none;
 }
 
@@ -157,42 +126,21 @@ button{
   display:block;
 }
 
-/* 会話欄 */
-
 #messageBox{
   position:absolute;
-
   left:0;
   right:0;
   bottom:0;
-
   width:100%;
-
   height:50vh;
   height:50dvh;
-
-  padding:
-  16px
-  18px
-  calc(16px + env(safe-area-inset-bottom));
-
-  background:
-  linear-gradient(
-    180deg,
-    rgba(140,95,60,.96),
-    rgba(55,32,20,.98)
-  );
-
-  border-top:
-  3px solid rgba(255,255,255,.15);
-
+  padding:16px 18px calc(16px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg,rgba(140,95,60,.96),rgba(55,32,20,.98));
+  border-top:3px solid rgba(255,255,255,.15);
   border-radius:22px 22px 0 0;
-
   display:flex;
   flex-direction:column;
-
   overflow-y:auto;
-
   z-index:10;
 }
 
@@ -203,41 +151,28 @@ button{
 
 #messageText{
   margin-top:10px;
-
   min-height:62px;
-
   font-size:16px;
   line-height:1.55;
-
   color:#fff7ed;
-
   letter-spacing:.03em;
 }
 
 #choices{
   margin-top:10px;
-
   display:flex;
   flex-direction:column;
-
   gap:8px;
 }
 
 .choiceButton{
   width:100%;
-
   text-align:left;
-
   padding:10px 14px;
-
   font-size:14px;
   line-height:1.35;
-
   border-radius:15px;
-
-  background:
-  linear-gradient(180deg,#e4bf96,#d4ab82);
-
+  background:linear-gradient(180deg,#e4bf96,#d4ab82);
   color:#2d1a12;
 }
 
@@ -248,100 +183,61 @@ button{
 #leaveButton{
   width:100%;
   height:42px;
-
   font-size:15px;
-
   border-radius:15px;
-
-  background:
-  linear-gradient(180deg,#5f3d29,#2d1b12);
-
+  background:linear-gradient(180deg,#5f3d29,#2d1b12);
   color:#fff5e8;
 }
 
-/* タイプライター */
-
 .typingCursor::after{
   content:"■";
-
   margin-left:4px;
-
   animation:blink 1s infinite;
 }
 
 @keyframes blink{
-
-  0%{
-    opacity:1;
-  }
-
-  50%{
-    opacity:0;
-  }
-
-  100%{
-    opacity:1;
-  }
+  0%{opacity:1;}
+  50%{opacity:0;}
+  100%{opacity:1;}
 }
-
-/* リザルト */
 
 #resultScreen{
   justify-content:flex-start;
-
   padding:34px 22px 20px;
-
-  background:
-  linear-gradient(180deg,#26160f,#120a07);
+  background:linear-gradient(180deg,#26160f,#120a07);
 }
 
 #resultTitle{
   margin-top:8px;
-
   font-size:28px;
-
   text-align:center;
-
   color:#ffd08a;
 }
 
 #resultComment{
   margin-top:16px;
-
   text-align:center;
-
   line-height:1.8;
-
   color:#f1dcc3;
-
   padding:0 8px;
-
   font-size:16px;
 }
 
 #stats{
   margin-top:28px;
-
   width:100%;
   max-width:380px;
-
   padding:18px;
-
   border-radius:18px;
-
   background:rgba(255,255,255,.08);
-
   line-height:2.1;
-
   font-size:18px;
-
   color:#fff2e2;
 }
 
 .statRow{
   display:flex;
   justify-content:space-between;
-
   gap:14px;
 }
 
@@ -356,21 +252,15 @@ button{
 #resultButtons{
   width:100%;
   max-width:380px;
-
   margin-top:22px;
-
   display:flex;
   flex-direction:column;
-
   gap:10px;
 }
 
 #resultButtons button{
   width:100%;
-
   padding:15px 16px;
-
   font-size:16px;
-
   border-radius:16px;
 }
